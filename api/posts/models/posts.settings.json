@@ -16,16 +16,25 @@
       "type": "string"
     },
     "dislikes": {
-      "via": "post",
-      "collection": "dislikes"
+      "collection": "dislikes",
+      "via": "post"
     },
     "likes": {
-      "via": "post",
-      "collection": "likes"
+      "collection": "likes",
+      "via": "post"
     },
     "comments": {
-      "via": "post",
-      "collection": "comments"
+      "collection": "comments",
+      "via": "post"
+    },
+    "audio": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

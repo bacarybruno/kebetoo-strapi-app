@@ -13,8 +13,8 @@
       "type": "string"
     },
     "post": {
-      "model": "posts",
-      "via": "dislikes"
+      "via": "dislikes",
+      "model": "posts"
     }
   }
 }

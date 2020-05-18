@@ -1,7 +1,7 @@
 const faker = require('faker')
 const axios = require('axios').default
 
-const populate = async (nbr) => {
+const createPost = async (nbr) => {
   for (let i = 0; i < nbr; i++) {
     const body = {
       author: '2hCTAHiYapeqnJwAliIwwqLpqDj1',
@@ -11,6 +11,18 @@ const populate = async (nbr) => {
   }
 }
 
+const comment = async (nbr) => {
+  for (let i = 0; i < nbr; i++) {
+    const body = {
+      author: '2hCTAHiYapeqnJwAliIwwqLpqDj1',
+      post: '5ea4ba3a1dc10949d06cd0a6',
+      content: faker.hacker.phrase()
+    }
+    await axios.post('http://localhost:1337/comments', body)
+  }
+}
+
 (async () => {
-  await populate(1000)
+  // await createPost(1000)
+  await comment(30)
 })()
