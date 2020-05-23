@@ -15,14 +15,6 @@
     "author": {
       "type": "string"
     },
-    "dislikes": {
-      "collection": "dislikes",
-      "via": "post"
-    },
-    "likes": {
-      "collection": "likes",
-      "via": "post"
-    },
     "comments": {
       "collection": "comments",
       "via": "post"
@@ -35,6 +27,10 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "reactions": {
+      "via": "post",
+      "collection": "reactions"
     }
   }
 }

@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `dislikes` model.
+ * Lifecycle callbacks for the `reactions` model.
  */
 
 module.exports = {

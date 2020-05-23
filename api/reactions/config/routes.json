@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/dislikes",
-      "handler": "dislikes.find",
+      "path": "/reactions",
+      "handler": "reactions.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/dislikes/count",
-      "handler": "dislikes.count",
+      "path": "/reactions/count",
+      "handler": "reactions.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/dislikes/:id",
-      "handler": "dislikes.findOne",
+      "path": "/reactions/:id",
+      "handler": "reactions.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/dislikes",
-      "handler": "dislikes.create",
+      "path": "/reactions",
+      "handler": "reactions.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/dislikes/:id",
-      "handler": "dislikes.update",
+      "path": "/reactions/:id",
+      "handler": "reactions.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/dislikes/:id",
-      "handler": "dislikes.delete",
+      "path": "/reactions/:id",
+      "handler": "reactions.delete",
       "config": {
         "policies": []
       }

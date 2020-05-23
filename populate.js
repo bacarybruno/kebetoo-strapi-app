@@ -23,6 +23,6 @@ const comment = async (nbr) => {
 }
 
 (async () => {
-  // await createPost(1000)
-  await comment(30)
+  await createPost(100)
+  // await comment(30)
 })()
