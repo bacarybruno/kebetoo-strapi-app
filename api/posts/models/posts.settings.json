@@ -16,8 +16,8 @@
       "type": "string"
     },
     "comments": {
-      "collection": "comments",
-      "via": "post"
+      "via": "post",
+      "collection": "comments"
     },
     "audio": {
       "model": "file",

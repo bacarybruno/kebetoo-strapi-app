@@ -16,8 +16,19 @@
       "type": "string"
     },
     "post": {
-      "via": "comments",
-      "model": "posts"
+      "model": "posts",
+      "via": "comments"
+    },
+    "audio": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
