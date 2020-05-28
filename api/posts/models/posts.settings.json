@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "posts",
   "info": {
-    "name": "Posts"
+    "name": "posts"
   },
   "options": {
     "increments": true,

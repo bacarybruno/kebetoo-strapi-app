@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "reactions",
   "info": {
-    "name": "Reactions"
+    "name": "reactions"
   },
   "options": {
     "increments": true,

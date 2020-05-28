@@ -2,13 +2,22 @@
   "kind": "collectionType",
   "collectionName": "comments",
   "info": {
-    "name": "Comments"
+    "name": "comments"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
+    "audio": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
     "content": {
       "type": "text"
     },
@@ -18,17 +27,6 @@
     "post": {
       "model": "posts",
       "via": "comments"
-    },
-    "audio": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
     }
   }
 }
