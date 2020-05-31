@@ -16,8 +16,8 @@
       "type": "string"
     },
     "comments": {
-      "via": "post",
-      "collection": "comments"
+      "collection": "comments",
+      "via": "post"
     },
     "audio": {
       "model": "file",
@@ -29,8 +29,19 @@
       "required": false
     },
     "reactions": {
-      "via": "post",
-      "collection": "reactions"
+      "collection": "reactions",
+      "via": "post"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
