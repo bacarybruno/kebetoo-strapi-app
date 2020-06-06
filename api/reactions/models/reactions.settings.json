@@ -10,8 +10,8 @@
   },
   "attributes": {
     "post": {
-      "via": "reactions",
-      "model": "posts"
+      "model": "posts",
+      "via": "reactions"
     },
     "author": {
       "type": "string"
@@ -20,8 +20,13 @@
       "type": "enumeration",
       "enum": [
         "like",
-        "dislike"
+        "dislike",
+        "love"
       ]
+    },
+    "comment": {
+      "model": "comments",
+      "via": "reactions"
     }
   }
 }

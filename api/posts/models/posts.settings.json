@@ -29,8 +29,8 @@
       "required": false
     },
     "reactions": {
-      "collection": "reactions",
-      "via": "post"
+      "via": "post",
+      "collection": "reactions"
     },
     "image": {
       "model": "file",
