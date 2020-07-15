@@ -4,9 +4,9 @@ const axios = require('axios').default
 const createPost = async (nbr) => {
   for (let i = 0; i < nbr; i++) {
     const body = {
-      author: 'EfAfuAw5xUR3qbZxjHfexqQlAD83',
-      content: faker.hacker.phrase(),
-      repost: '5eea84f7c6662428f8eea726'
+      author: '5f09dc8138df624094b91c0f',
+      content: '[GENERATED] ' + faker.hacker.phrase(),
+      // repost: '5eea84f7c6662428f8eea726'
     }
     await axios.post('http://localhost:1337/posts', body)
   }
@@ -24,6 +24,6 @@ const comment = async (nbr) => {
 }
 
 (async () => {
-  await createPost(5)
+  await createPost(100)
   // await comment(30)
 })()

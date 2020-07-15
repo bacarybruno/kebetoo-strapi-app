@@ -10,11 +10,8 @@
   },
   "attributes": {
     "post": {
-      "via": "reactions",
-      "model": "posts"
-    },
-    "author": {
-      "type": "string"
+      "model": "posts",
+      "via": "reactions"
     },
     "type": {
       "type": "enumeration",
@@ -27,6 +24,10 @@
     "comment": {
       "model": "comments",
       "via": "reactions"
+    },
+    "author": {
+      "via": "reactions",
+      "model": "authors"
     }
   }
 }

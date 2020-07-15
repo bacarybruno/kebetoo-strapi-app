@@ -12,9 +12,6 @@
     "content": {
       "type": "text"
     },
-    "author": {
-      "type": "string"
-    },
     "comments": {
       "collection": "comments",
       "via": "post"
@@ -29,8 +26,8 @@
       "required": false
     },
     "reactions": {
-      "collection": "reactions",
-      "via": "post"
+      "via": "post",
+      "collection": "reactions"
     },
     "image": {
       "model": "file",
@@ -50,6 +47,10 @@
     "repost": {
       "model": "posts",
       "via": "reposts"
+    },
+    "author": {
+      "via": "posts",
+      "model": "authors"
     }
   }
 }

@@ -21,9 +21,6 @@
     "content": {
       "type": "text"
     },
-    "author": {
-      "type": "string"
-    },
     "post": {
       "via": "comments",
       "model": "posts"
@@ -31,6 +28,10 @@
     "reactions": {
       "via": "comment",
       "collection": "reactions"
+    },
+    "author": {
+      "via": "comments",
+      "model": "authors"
     }
   }
 }

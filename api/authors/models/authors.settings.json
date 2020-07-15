@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "name": "Authors"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "uid": {
+      "type": "string",
+      "unique": false
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "photoURL": {
+      "type": "string"
+    },
+    "comments": {
+      "collection": "comments",
+      "via": "author"
+    },
+    "posts": {
+      "collection": "posts",
+      "via": "author"
+    },
+    "reactions": {
+      "collection": "reactions",
+      "via": "author"
+    }
+  }
+}
