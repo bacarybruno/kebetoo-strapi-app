@@ -30,6 +30,9 @@
     "reactions": {
       "collection": "reactions",
       "via": "author"
+    },
+    "notificationToken": {
+      "type": "string"
     }
   }
 }
