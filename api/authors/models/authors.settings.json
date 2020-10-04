@@ -20,8 +20,8 @@
       "type": "string"
     },
     "comments": {
-      "collection": "comments",
-      "via": "author"
+      "via": "author",
+      "collection": "comments"
     },
     "posts": {
       "collection": "posts",

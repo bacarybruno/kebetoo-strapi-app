@@ -22,16 +22,24 @@
       "type": "text"
     },
     "post": {
-      "via": "comments",
-      "model": "posts"
+      "model": "posts",
+      "via": "comments"
     },
     "reactions": {
-      "via": "comment",
-      "collection": "reactions"
+      "collection": "reactions",
+      "via": "comment"
     },
     "author": {
-      "via": "comments",
-      "model": "authors"
+      "model": "authors",
+      "via": "comments"
+    },
+    "replies": {
+      "collection": "comments",
+      "via": "thread"
+    },
+    "thread": {
+      "model": "comments",
+      "via": "replies"
     }
   }
 }

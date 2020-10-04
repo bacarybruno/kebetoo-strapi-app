@@ -22,8 +22,8 @@
       ]
     },
     "comment": {
-      "model": "comments",
-      "via": "reactions"
+      "via": "reactions",
+      "model": "comments"
     },
     "author": {
       "via": "reactions",
