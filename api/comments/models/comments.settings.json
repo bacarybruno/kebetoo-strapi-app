@@ -22,8 +22,8 @@
       "type": "text"
     },
     "post": {
-      "model": "posts",
-      "via": "comments"
+      "via": "comments",
+      "model": "posts"
     },
     "reactions": {
       "collection": "reactions",

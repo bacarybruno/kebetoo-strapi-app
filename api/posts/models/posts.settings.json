@@ -13,8 +13,8 @@
       "type": "text"
     },
     "comments": {
-      "via": "post",
-      "collection": "comments"
+      "collection": "comments",
+      "via": "post"
     },
     "audio": {
       "model": "file",
@@ -26,8 +26,8 @@
       "required": false
     },
     "reactions": {
-      "via": "post",
-      "collection": "reactions"
+      "collection": "reactions",
+      "via": "post"
     },
     "image": {
       "model": "file",
@@ -49,8 +49,19 @@
       "via": "reposts"
     },
     "author": {
-      "via": "posts",
-      "model": "authors"
+      "model": "authors",
+      "via": "posts"
+    },
+    "video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

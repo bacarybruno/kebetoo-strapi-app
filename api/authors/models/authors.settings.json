@@ -24,8 +24,8 @@
       "collection": "comments"
     },
     "posts": {
-      "collection": "posts",
-      "via": "author"
+      "via": "author",
+      "collection": "posts"
     },
     "reactions": {
       "collection": "reactions",
