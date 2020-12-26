@@ -10,4 +10,14 @@
  * See more details here: https://strapi.io/documentation/3.0.0-beta.x/concepts/configurations.html#bootstrap
  */
 
-module.exports = () => {};
+const firebaseAdmin = require('firebase-admin');
+
+module.exports = () => {
+  // Check the number of initialized firebase apps
+  // to avoid redeclaring the app
+  if (firebaseAdmin.apps.length === 0) {
+    firebaseAdmin.initializeApp({
+      credential: firebaseAdmin.credential.applicationDefault(),
+    })
+  }
+};
