@@ -10086,7 +10086,7 @@ strapi-plugin-content-type-builder@3.4.1:
     strapi-utils "3.4.1"
     yup "^0.27.0"
 
-strapi-plugin-documentation@3.4.1:
+strapi-plugin-documentation@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/strapi-plugin-documentation/-/strapi-plugin-documentation-3.4.1.tgz#ad84294a349e5a17ec699793d6b147f6f7c4ac15"
   integrity sha512-am4UDdBmG5iiz7UfI9yjNQ4Q8WUZeDIaQXt9gThM5GesXXmN2QbJeyfviujo++abv5hcaTO6Ui732fqwdB6Oig==
