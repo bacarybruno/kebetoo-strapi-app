@@ -7,8 +7,8 @@
 module.exports = async (ctx, next) => {
   // decode firebase tokens
   try {
-    if (ctx.state.user) {
-      // request is already authenticated in a different way
+    if (ctx.state.user || ctx.state.admin) {
+      // request is already authenticated in a different way (eg. docs)
       return next();
     }
     ctx.state.user = await strapi.services.auth.getToken(ctx);
