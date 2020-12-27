@@ -4,7 +4,7 @@
     "version": "0.0.4",
     "title": "Kebetoo",
     "description": "API documentation for Kebetoo",
-    "x-generation-date": "12/27/2020 12:44:44 PM"
+    "x-generation-date": "12/27/2020 12:51:04 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
