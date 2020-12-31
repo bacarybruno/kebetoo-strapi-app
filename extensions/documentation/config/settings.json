@@ -1,0 +1,35 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "0.0.4",
+    "title": "Kebetoo",
+    "description": "API documentation for Kebetoo"
+  },
+  "x-strapi-config": {
+    "path": "/documentation",
+    "showGeneratedFiles": true,
+    "pluginsForWhichToGenerateDoc": []
+  },
+  "servers": [
+    {
+      "url": "http://localhost:1337",
+      "description": "Development server"
+    },
+    {
+      "url": "https://kebetoo.herokuapp.com",
+      "description": "Staging server"
+    }
+  ],
+  "externalDocs": {
+    "description": "Github repo",
+    "url": "https://github.com/bacarybruno/kebetoo-strapi-app"
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {},
+  "tags": [],
+  "components": {}
+}

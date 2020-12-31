@@ -16,8 +16,12 @@ module.exports = () => {
   // Check the number of initialized firebase apps
   // to avoid redeclaring the app
   if (firebaseAdmin.apps.length === 0) {
-    firebaseAdmin.initializeApp({
-      credential: firebaseAdmin.credential.applicationDefault(),
-    })
+    try {
+      firebaseAdmin.initializeApp({
+        credential: firebaseAdmin.credential.applicationDefault(),
+      }) 
+    } catch (error) {
+      console.log('An error occured while initializing the firebase app. Please check your firebase credentials.');
+    }
   }
 };

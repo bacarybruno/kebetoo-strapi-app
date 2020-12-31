@@ -1,13 +1,14 @@
 {
   "name": "kebetoo-strapi-app",
   "private": true,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "heroku-postbuild": "node ./migrate-3.4.0.js ./"
   },
   "devDependencies": {
     "axios": "^0.19.2",
@@ -15,16 +16,17 @@
   },
   "dependencies": {
     "firebase-admin": "^9.4.2",
-    "strapi": "3.0.0",
-    "strapi-admin": "3.0.0",
-    "strapi-connector-mongoose": "3.0.0",
-    "strapi-plugin-content-manager": "3.0.0",
-    "strapi-plugin-content-type-builder": "3.0.0",
-    "strapi-plugin-email": "3.0.0",
-    "strapi-plugin-upload": "3.0.0",
-    "strapi-plugin-users-permissions": "3.0.0",
-    "strapi-provider-upload-aws-s3": "^3.1.6",
-    "strapi-utils": "3.0.0"
+    "strapi": "3.4.1",
+    "strapi-admin": "3.4.1",
+    "strapi-connector-mongoose": "3.4.1",
+    "strapi-plugin-content-manager": "3.4.1",
+    "strapi-plugin-content-type-builder": "3.4.1",
+    "strapi-plugin-documentation": "^3.4.1",
+    "strapi-plugin-email": "3.4.1",
+    "strapi-plugin-upload": "3.4.1",
+    "strapi-plugin-users-permissions": "3.4.1",
+    "strapi-provider-upload-aws-s3": "3.4.1",
+    "strapi-utils": "3.4.1"
   },
   "author": {
     "name": "A Strapi developer"
