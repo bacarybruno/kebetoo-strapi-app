@@ -8,8 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "heroku-postinstall": "NODE_ENV=production npm run build",
-    "heroku-postbuild": "node ./migrate-3.4.0.js ./"
+    "heroku-postbuild": "NODE_ENV=production npm run build && node ./migrate-3.4.0.js ./"
   },
   "devDependencies": {
     "axios": "^0.19.2",
