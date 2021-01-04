@@ -14,6 +14,7 @@ module.exports = {
         throw new Error('The specified token is invalid.');
       }
     }
+    console.log(ctx);
     throw new Error('Missing authorization in header.');
   },
 };
