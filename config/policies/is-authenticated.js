@@ -15,6 +15,7 @@ module.exports = async (ctx, next) => {
     // Go to next policy or will reach the controller's action.
     return await next();
   } catch (error) {
+    console.log(error);
     ctx.unauthorized(error.message || error);
   }
 };
