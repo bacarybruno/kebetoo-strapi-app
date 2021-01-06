@@ -2,11 +2,13 @@
   "kind": "collectionType",
   "collectionName": "authors",
   "info": {
-    "name": "Authors"
+    "name": "Authors",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "uid": {
@@ -20,12 +22,12 @@
       "type": "string"
     },
     "comments": {
-      "via": "author",
-      "collection": "comments"
+      "collection": "comments",
+      "via": "author"
     },
     "posts": {
-      "via": "author",
-      "collection": "posts"
+      "collection": "posts",
+      "via": "author"
     },
     "reactions": {
       "collection": "reactions",
@@ -33,6 +35,11 @@
     },
     "notificationToken": {
       "type": "string"
+    },
+    "feedbacks": {
+      "private": true,
+      "collection": "feedbacks",
+      "via": "author"
     }
   }
 }

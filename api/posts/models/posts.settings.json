@@ -2,11 +2,13 @@
   "kind": "collectionType",
   "collectionName": "posts",
   "info": {
-    "name": "posts"
+    "name": "posts",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": true
   },
   "attributes": {
     "content": {
@@ -33,9 +35,7 @@
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
       ],
       "plugin": "upload",
       "required": false
@@ -49,15 +49,13 @@
       "via": "reposts"
     },
     "author": {
-      "model": "authors",
-      "via": "posts"
+      "via": "posts",
+      "model": "authors"
     },
     "video": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "files",
         "videos"
       ],
       "plugin": "upload",

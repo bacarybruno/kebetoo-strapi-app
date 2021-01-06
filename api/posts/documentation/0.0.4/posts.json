@@ -782,6 +782,9 @@
                 "video": {
                   "type": "string"
                 },
+                "published_at": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -835,6 +838,9 @@
               "video": {
                 "type": "string"
               },
+              "published_at": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -880,6 +886,12 @@
               },
               "notificationToken": {
                 "type": "string"
+              },
+              "feedbacks": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "created_by": {
                 "type": "string"
@@ -955,6 +967,10 @@
                 "type": "string"
               }
             }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -986,6 +1002,10 @@
           },
           "author": {
             "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"

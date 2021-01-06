@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/authors": {
+    "/feedbacks": {
       "get": {
         "deprecated": false,
-        "description": "Find all the authors's records",
+        "description": "Find all the feedbacks's records",
         "responses": {
           "200": {
-            "description": "Retrieve authors document(s)",
+            "description": "Retrieve feedbacks document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Authors"
+                    "$ref": "#/components/schemas/Feedbacks"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Authors"
+          "Feedbacks"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new authors record",
+        "description": "Create a new feedbacks record",
         "responses": {
           "200": {
-            "description": "Retrieve authors document(s)",
+            "description": "Retrieve feedbacks document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Authors"
+                  "$ref": "#/components/schemas/Feedbacks"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Authors"
+          "Feedbacks"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAuthors"
+                "$ref": "#/components/schemas/NewFeedbacks"
               }
             }
           }
         }
       }
     },
-    "/authors/count": {
+    "/feedbacks/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of authors documents",
+        "description": "Retrieve the numver of feedbacks documents",
         "responses": {
           "200": {
-            "description": "Retrieve authors document(s)",
+            "description": "Retrieve feedbacks document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Authors"
+          "Feedbacks"
         ],
         "parameters": []
       }
     },
-    "/authors/{id}": {
+    "/feedbacks/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one authors record",
+        "description": "Find one feedbacks record",
         "responses": {
           "200": {
-            "description": "Retrieve authors document(s)",
+            "description": "Retrieve feedbacks document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Authors"
+                  "$ref": "#/components/schemas/Feedbacks"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Authors"
+          "Feedbacks"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single authors record",
+        "description": "Update a single feedbacks record",
         "responses": {
           "200": {
-            "description": "Retrieve authors document(s)",
+            "description": "Retrieve feedbacks document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Authors"
+                  "$ref": "#/components/schemas/Feedbacks"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Authors"
+          "Feedbacks"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewAuthors"
+                "$ref": "#/components/schemas/NewFeedbacks"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single authors record",
+        "description": "Delete a single feedbacks record",
         "responses": {
           "200": {
-            "description": "deletes a single authors based on the ID supplied",
+            "description": "deletes a single feedbacks based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Authors"
+          "Feedbacks"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Authors": {
+      "Feedbacks": {
         "required": [
           "id"
         ],
@@ -522,192 +522,145 @@
           "id": {
             "type": "string"
           },
-          "uid": {
+          "content": {
             "type": "string"
           },
-          "displayName": {
-            "type": "string"
-          },
-          "photoURL": {
-            "type": "string"
-          },
-          "comments": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "audio": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "post": {
-                  "type": "string"
-                },
-                "reactions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "author": {
-                  "type": "string"
-                },
-                "replies": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "thread": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
+          "author": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "uid": {
+                "type": "string"
+              },
+              "displayName": {
+                "type": "string"
+              },
+              "photoURL": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
+              },
+              "posts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "reactions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "notificationToken": {
+                "type": "string"
+              },
+              "feedbacks": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
-          "posts": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "comments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "audio": {
-                  "type": "string"
-                },
-                "reactions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "image": {
-                  "type": "string"
-                },
-                "reposts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "repost": {
-                  "type": "string"
-                },
-                "author": {
-                  "type": "string"
-                },
-                "video": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
+          "image": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
-          "reactions": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "post": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "comment": {
-                  "type": "string"
-                },
-                "author": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "notificationToken": {
-            "type": "string"
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewAuthors": {
+      "NewFeedbacks": {
         "properties": {
-          "uid": {
+          "content": {
             "type": "string"
           },
-          "displayName": {
+          "author": {
             "type": "string"
           },
-          "photoURL": {
-            "type": "string"
-          },
-          "comments": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "posts": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "reactions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "notificationToken": {
-            "type": "string"
-          },
-          "feedbacks": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -721,7 +674,7 @@
   },
   "tags": [
     {
-      "name": "Authors"
+      "name": "Feedbacks"
     }
   ]
 }
