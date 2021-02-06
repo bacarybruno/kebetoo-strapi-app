@@ -4,7 +4,7 @@
     "version": "0.0.4",
     "title": "Kebetoo",
     "description": "API documentation for Kebetoo",
-    "x-generation-date": "01/06/2021 2:53:04 AM"
+    "x-generation-date": "02/06/2021 9:48:42 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2703,6 +2703,12 @@
                 "video": {
                   "type": "string"
                 },
+                "lastActive": {
+                  "type": "string"
+                },
+                "score": {
+                  "type": "number"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -2918,6 +2924,12 @@
               },
               "video": {
                 "type": "string"
+              },
+              "lastActive": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
               },
               "published_at": {
                 "type": "string"
@@ -3562,6 +3574,12 @@
                 "video": {
                   "type": "string"
                 },
+                "lastActive": {
+                  "type": "string"
+                },
+                "score": {
+                  "type": "number"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -3617,6 +3635,12 @@
               },
               "video": {
                 "type": "string"
+              },
+              "lastActive": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
               },
               "published_at": {
                 "type": "string"
@@ -3748,6 +3772,14 @@
               }
             }
           },
+          "lastActive": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "score": {
+            "type": "number",
+            "default": 0
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3782,6 +3814,14 @@
           },
           "author": {
             "type": "string"
+          },
+          "lastActive": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "score": {
+            "type": "number",
+            "default": 0
           },
           "published_at": {
             "type": "string",
@@ -3846,6 +3886,12 @@
               },
               "video": {
                 "type": "string"
+              },
+              "lastActive": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
               },
               "published_at": {
                 "type": "string"

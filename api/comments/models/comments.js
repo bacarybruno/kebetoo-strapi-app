@@ -5,35 +5,26 @@
  * to customize this model
  */
 
-const deleteContent = (name) => (content) => strapi.services[name].delete({ id: content.id });
-
-const deleteContents = (contents, name) => {
-  if (contents && contents.length > 0) {
-    return contents.map(deleteContent(name))
-  }
-  return []
-};
-
-const deleteAsset = async (asset) => {
-  if (asset) {
-    return strapi.plugins.upload.services.upload.remove(asset);
-  }
-  return Promise.resolve(null);
-};
-
 module.exports = {
   lifecycles: {
     async afterDelete({ replies, reactions, audio }) {
       try {
+        const { cleanup } = strapi.services.lifecycles;
         // delete replies
-        await Promise.all(deleteContents(replies, 'comments'));
+        await cleanup.replies(replies);
         // delete reactions
-        await Promise.all(deleteContents(reactions, 'reactions'));
+        await cleanup.reactions(reactions);
         // delete audio
-        await deleteAsset(audio);
+        await cleanup.asset(audio);
       } catch (error) {
         console.log(error);
       }
+    },
+    async afterCreate({ post }) {
+      return strapi.services.lifecycles.posts.updateLastActive(post); 
+    },
+    async afterUpdate({ post }) {
+      return strapi.services.lifecycles.posts.updateLastActive(post);
     },
   },
 };
