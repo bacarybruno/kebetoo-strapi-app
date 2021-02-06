@@ -4,7 +4,17 @@
     "version": "0.0.4",
     "title": "Kebetoo",
     "description": "API documentation for Kebetoo",
-    "x-generation-date": "02/06/2021 9:48:42 PM"
+    "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
+    "contact": {
+      "name": "TEAM",
+      "email": "contact-email@something.io",
+      "url": "mywebsite.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "x-generation-date": "02/07/2021 12:19:44 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3774,7 +3784,8 @@
           },
           "lastActive": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "default": "2021-02-07T01:00:00.000Z"
           },
           "score": {
             "type": "number",
@@ -3817,7 +3828,8 @@
           },
           "lastActive": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "default": "2021-02-07T01:00:00.000Z"
           },
           "score": {
             "type": "number",

@@ -982,7 +982,8 @@
           },
           "lastActive": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "default": "2021-02-07T01:00:00.000Z"
           },
           "score": {
             "type": "number",
@@ -1025,7 +1026,8 @@
           },
           "lastActive": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "default": "2021-02-07T01:00:00.000Z"
           },
           "score": {
             "type": "number",
