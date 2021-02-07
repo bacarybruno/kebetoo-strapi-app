@@ -5,31 +5,11 @@
  * to customize this model
  */
 
-const deleteContent = (name) => (content) => strapi.services[name].delete({ id: content.id });
-
-const deleteContents = (contents, name) => {
-  if (contents && contents.length > 0) {
-    return contents.map(deleteContent(name))
-  }
-  return []
-};
-
-const deleteAsset = async (asset) => {
-  if (asset) {
-    return strapi.plugins.upload.services.upload.remove(asset);
-  }
-  return Promise.resolve(null);
-};
-
-const deleteAssetFromProvider = async (asset) => {
-  if (asset) {
-    return strapi.plugins.upload.provider.delete(asset);
-  }
-  return Promise.resolve(null);
-};
-
 module.exports = {
   lifecycles: {
+    async beforeCreate(data) {
+      data.lastActive = new Date().toISOString();
+    },
     async afterDelete({ comments, reactions, image, audio, video }) {
       try {
         const { cleanup } = strapi.services.lifecycles;
