@@ -5,4 +5,13 @@
  * to customize this model
  */
 
-module.exports = {};
+module.exports = {
+  lifecycles: {
+    async afterCreate({ post }) {
+      return strapi.services.lifecycles.posts.updateLastActive(post);
+    },
+    async afterUpdate({ post }) {
+      return strapi.services.lifecycles.posts.updateLastActive(post);
+    },
+  },
+};

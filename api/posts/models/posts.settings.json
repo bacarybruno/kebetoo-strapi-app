@@ -49,8 +49,8 @@
       "via": "reposts"
     },
     "author": {
-      "via": "posts",
-      "model": "authors"
+      "model": "authors",
+      "via": "posts"
     },
     "video": {
       "model": "file",
@@ -60,6 +60,14 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "lastActive": {
+      "type": "datetime",
+      "default": "2021-02-07T01:00:00.000Z"
+    },
+    "score": {
+      "type": "float",
+      "default": 0
     }
   }
 }

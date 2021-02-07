@@ -32,16 +32,16 @@ module.exports = {
   lifecycles: {
     async afterDelete({ comments, reactions, image, audio, video }) {
       try {
+        const { cleanup } = strapi.services.lifecycles;
         // delete comments
-        await Promise.all(deleteContents(comments, 'comments'));
+        await cleanup.comments(comments);
         // delete reactions
-        await Promise.all(deleteContents(reactions, 'reactions'));
-        // delete images
-        await deleteAsset(image);
+        await cleanup.reactions(reactions);
+        // delete image
+        await cleanup.asset(image);
         // delete audio
-        await deleteAsset(audio);
+        await cleanup.asset(audio);
         // delete video
-        await deleteAsset(video);
         if (video) {
           const videoPngThumbnail = {
             hash: `thumbnails/${video.hash}`,
@@ -52,9 +52,9 @@ module.exports = {
             ext: '.gif',
           };
           await Promise.all([
-            deleteAsset(video),
-            deleteAssetFromProvider(videoPngThumbnail),
-            deleteAssetFromProvider(videoGifThumbnail)
+            cleanup.asset(video),
+            cleanup.providerAsset(videoPngThumbnail),
+            cleanup.providerAsset(videoGifThumbnail)
           ]);
         }
       } catch (error) {

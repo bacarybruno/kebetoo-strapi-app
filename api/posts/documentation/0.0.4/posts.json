@@ -782,6 +782,12 @@
                 "video": {
                   "type": "string"
                 },
+                "lastActive": {
+                  "type": "string"
+                },
+                "score": {
+                  "type": "number"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -837,6 +843,12 @@
               },
               "video": {
                 "type": "string"
+              },
+              "lastActive": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
               },
               "published_at": {
                 "type": "string"
@@ -968,6 +980,15 @@
               }
             }
           },
+          "lastActive": {
+            "type": "string",
+            "format": "date-time",
+            "default": "2021-02-07T01:00:00.000Z"
+          },
+          "score": {
+            "type": "number",
+            "default": 0
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -1002,6 +1023,15 @@
           },
           "author": {
             "type": "string"
+          },
+          "lastActive": {
+            "type": "string",
+            "format": "date-time",
+            "default": "2021-02-07T01:00:00.000Z"
+          },
+          "score": {
+            "type": "number",
+            "default": 0
           },
           "published_at": {
             "type": "string",

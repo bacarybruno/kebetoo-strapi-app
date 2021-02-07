@@ -4,7 +4,17 @@
     "version": "0.0.4",
     "title": "Kebetoo",
     "description": "API documentation for Kebetoo",
-    "x-generation-date": "01/06/2021 2:53:04 AM"
+    "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
+    "contact": {
+      "name": "TEAM",
+      "email": "contact-email@something.io",
+      "url": "mywebsite.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "x-generation-date": "02/07/2021 12:19:44 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2703,6 +2713,12 @@
                 "video": {
                   "type": "string"
                 },
+                "lastActive": {
+                  "type": "string"
+                },
+                "score": {
+                  "type": "number"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -2918,6 +2934,12 @@
               },
               "video": {
                 "type": "string"
+              },
+              "lastActive": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
               },
               "published_at": {
                 "type": "string"
@@ -3562,6 +3584,12 @@
                 "video": {
                   "type": "string"
                 },
+                "lastActive": {
+                  "type": "string"
+                },
+                "score": {
+                  "type": "number"
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -3617,6 +3645,12 @@
               },
               "video": {
                 "type": "string"
+              },
+              "lastActive": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
               },
               "published_at": {
                 "type": "string"
@@ -3748,6 +3782,15 @@
               }
             }
           },
+          "lastActive": {
+            "type": "string",
+            "format": "date-time",
+            "default": "2021-02-07T01:00:00.000Z"
+          },
+          "score": {
+            "type": "number",
+            "default": 0
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3782,6 +3825,15 @@
           },
           "author": {
             "type": "string"
+          },
+          "lastActive": {
+            "type": "string",
+            "format": "date-time",
+            "default": "2021-02-07T01:00:00.000Z"
+          },
+          "score": {
+            "type": "number",
+            "default": 0
           },
           "published_at": {
             "type": "string",
@@ -3846,6 +3898,12 @@
               },
               "video": {
                 "type": "string"
+              },
+              "lastActive": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
               },
               "published_at": {
                 "type": "string"

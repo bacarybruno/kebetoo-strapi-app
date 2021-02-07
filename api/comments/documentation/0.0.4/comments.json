@@ -636,6 +636,12 @@
               "video": {
                 "type": "string"
               },
+              "lastActive": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
+              },
               "published_at": {
                 "type": "string"
               },
