@@ -4,7 +4,7 @@ module.exports = {
       name: 'app',
       script: 'app.js',
       watch: ['api', 'config'],
-      instances: 2,
+      instances: process.env.MAX_WORKERS || 2,
     },
   ],
 };
