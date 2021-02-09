@@ -116,3 +116,4 @@ build
 # Custom
 ############################
 credentials/firebase-service-account.json
+load-test-report.json
