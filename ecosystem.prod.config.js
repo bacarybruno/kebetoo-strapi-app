@@ -4,7 +4,7 @@ module.exports = {
       name: 'app',
       script: 'app.js',
       watch: false,
-      instances: 'max',
+      instances: process.env.MAX_WORKERS || 'max',
     },
   ],
 };
