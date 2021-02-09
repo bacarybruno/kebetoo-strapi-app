@@ -1,0 +1,12 @@
+config:
+  target: "https://kebetoo.herokuapp.com"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+  defaults:
+    headers:
+      Authorization: "BEARER_XXX"
+scenarios:
+  - flow:
+    - get:
+        url: "/posts?_sort=updatedAt:desc&_start=0&_limit=20"

@@ -4,18 +4,21 @@
   "version": "0.2.1",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
+    "develop": "pm2-runtime start ecosystem.dev.config.js",
+    "start": "pm2-runtime start ecosystem.prod.config.js",
     "build": "strapi build",
     "strapi": "strapi",
+    "load:test": "artillery run load-test.yaml -o load-test-report.json",
     "heroku-postbuild": "npm run build && node ./migrate-3.4.0.js ./"
   },
   "devDependencies": {
+    "artillery": "^1.6.1",
     "axios": "^0.19.2",
     "faker": "^4.1.0"
   },
   "dependencies": {
     "firebase-admin": "^9.4.2",
+    "pm2": "^4.5.4",
     "strapi": "3.4.1",
     "strapi-admin": "3.4.1",
     "strapi-connector-mongoose": "3.4.1",
