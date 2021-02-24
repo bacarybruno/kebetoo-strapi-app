@@ -728,6 +728,12 @@
                   "type": "string"
                 }
               },
+              "username": {
+                "type": "string"
+              },
+              "bio": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },

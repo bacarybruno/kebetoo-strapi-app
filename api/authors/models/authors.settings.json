@@ -26,8 +26,8 @@
       "via": "author"
     },
     "posts": {
-      "via": "author",
-      "collection": "posts"
+      "collection": "posts",
+      "via": "author"
     },
     "reactions": {
       "collection": "reactions",
@@ -40,6 +40,12 @@
       "private": true,
       "collection": "feedbacks",
       "via": "author"
+    },
+    "username": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
     }
   }
 }
