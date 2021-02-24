@@ -30,8 +30,8 @@
       "via": "comment"
     },
     "author": {
-      "model": "authors",
-      "via": "comments"
+      "via": "comments",
+      "model": "authors"
     },
     "replies": {
       "collection": "comments",

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/07/2021 12:19:44 AM"
+    "x-generation-date": "02/24/2021 1:57:03 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2764,6 +2764,12 @@
           },
           "notificationToken": {
             "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "bio": {
+            "type": "string"
           }
         }
       },
@@ -2804,6 +2810,12 @@
             "items": {
               "type": "string"
             }
+          },
+          "username": {
+            "type": "string"
+          },
+          "bio": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -3027,6 +3039,12 @@
                   "type": "string"
                 }
               },
+              "username": {
+                "type": "string"
+              },
+              "bio": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -3214,6 +3232,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "username": {
+                "type": "string"
+              },
+              "bio": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -3707,6 +3731,12 @@
                   "type": "string"
                 }
               },
+              "username": {
+                "type": "string"
+              },
+              "bio": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -4010,6 +4040,12 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "username": {
+                "type": "string"
+              },
+              "bio": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"

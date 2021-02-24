@@ -49,8 +49,8 @@
       "via": "reposts"
     },
     "author": {
-      "model": "authors",
-      "via": "posts"
+      "via": "posts",
+      "model": "authors"
     },
     "video": {
       "model": "file",
