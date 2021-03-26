@@ -47,7 +47,7 @@ module.exports = {
     return Promise.all([
       strapi.query('posts').find(queryParams),
       strapi.query('comments').find(queryParams, [populatePost, populateComments, populateReactions]),
-      strapi.query('reactions').find(queryParams, [populatePost, populateComments, populateReactions])
+      strapi.query('reactions').find(queryParams, [populatePost, populateComments, populateReactions]),
     ]);
   },
   findActivities: async (author, from = null, sort = 'updatedAt:DESC', limit = 20) => {
