@@ -36,10 +36,14 @@ module.exports = {
       path: 'post', populate: { path: 'author' }
     };
 
+    const populateReactions = {
+      path: 'post', populate: { path: 'reactions' }
+    };
+
     return Promise.all([
       strapi.query('posts').find(queryParams),
-      strapi.query('comments').find(queryParams, [populatePost]),
-      strapi.query('reactions').find(queryParams, [populatePost])
+      strapi.query('comments').find(queryParams, [populatePost, populateReactions]),
+      strapi.query('reactions').find(queryParams, [populatePost, populateReactions])
     ]);
   },
   findActivities: async (author, from = null, sort = 'updatedAt:DESC', limit = 20) => {
