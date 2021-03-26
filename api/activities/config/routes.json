@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/activities/:uid",
+      "handler": "activities.findByUid",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/activities/:uid/count",
+      "handler": "activities.count",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

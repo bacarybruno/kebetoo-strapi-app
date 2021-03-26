@@ -1,0 +1,14 @@
+{
+  "collectionName": "activities",
+  "info": {
+    "name": "activities",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {}
+}
