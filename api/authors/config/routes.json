@@ -25,6 +25,22 @@
       }
     },
     {
+      "method": "GET",
+      "path": "/authors/:id/activities",
+      "handler": "authors.findActivities",
+      "config": {
+       "policies": ["global::is-authenticated"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/authors/:id/activities/count",
+      "handler": "authors.countActivities",
+      "config": {
+       "policies": ["global::is-authenticated"]
+      }
+    },
+    {
       "method": "POST",
       "path": "/authors",
       "handler": "authors.create",
