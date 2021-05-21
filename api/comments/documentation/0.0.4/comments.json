@@ -713,7 +713,12 @@
                   "type": "string"
                 },
                 "type": {
-                  "type": "string"
+                  "type": "string",
+                  "enum": [
+                    "like",
+                    "dislike",
+                    "love"
+                  ]
                 },
                 "comment": {
                   "type": "string"
