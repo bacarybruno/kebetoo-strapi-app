@@ -686,6 +686,9 @@
                 "post": {
                   "type": "string"
                 },
+                "story": {
+                  "type": "string"
+                },
                 "reactions": {
                   "type": "array",
                   "items": {
@@ -777,6 +780,52 @@
               }
             }
           },
+          "stories": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "comments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reactions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "author": {
+                  "type": "string"
+                },
+                "video": {
+                  "type": "string"
+                },
+                "score": {
+                  "type": "number"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "reactions": {
             "type": "array",
             "items": {
@@ -788,6 +837,9 @@
                   "type": "string"
                 },
                 "post": {
+                  "type": "string"
+                },
+                "story": {
                   "type": "string"
                 },
                 "type": {
@@ -837,6 +889,12 @@
             }
           },
           "posts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "stories": {
             "type": "array",
             "items": {
               "type": "string"

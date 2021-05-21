@@ -29,6 +29,10 @@
       "collection": "posts",
       "via": "author"
     },
+    "stories": {
+      "collection": "stories",
+      "via": "author"
+    },
     "reactions": {
       "collection": "reactions",
       "via": "author"

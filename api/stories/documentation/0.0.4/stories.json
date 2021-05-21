@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/posts": {
+    "/stories": {
       "get": {
         "deprecated": false,
-        "description": "Find all the posts's records",
+        "description": "Find all the stories's records",
         "responses": {
           "200": {
-            "description": "Retrieve posts document(s)",
+            "description": "Retrieve stories document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Posts"
+                    "$ref": "#/components/schemas/Stories"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Posts"
+          "Stories"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new posts record",
+        "description": "Create a new stories record",
         "responses": {
           "200": {
-            "description": "Retrieve posts document(s)",
+            "description": "Retrieve stories document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Posts"
+                  "$ref": "#/components/schemas/Stories"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Posts"
+          "Stories"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPosts"
+                "$ref": "#/components/schemas/NewStories"
               }
             }
           }
         }
       }
     },
-    "/posts/count": {
+    "/stories/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of posts documents",
+        "description": "Retrieve the numver of stories documents",
         "responses": {
           "200": {
-            "description": "Retrieve posts document(s)",
+            "description": "Retrieve stories document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Posts"
+          "Stories"
         ],
         "parameters": []
       }
     },
-    "/posts/{id}": {
+    "/stories/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one posts record",
+        "description": "Find one stories record",
         "responses": {
           "200": {
-            "description": "Retrieve posts document(s)",
+            "description": "Retrieve stories document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Posts"
+                  "$ref": "#/components/schemas/Stories"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Posts"
+          "Stories"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single posts record",
+        "description": "Update a single stories record",
         "responses": {
           "200": {
-            "description": "Retrieve posts document(s)",
+            "description": "Retrieve stories document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Posts"
+                  "$ref": "#/components/schemas/Stories"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Posts"
+          "Stories"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPosts"
+                "$ref": "#/components/schemas/NewStories"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single posts record",
+        "description": "Delete a single stories record",
         "responses": {
           "200": {
-            "description": "deletes a single posts based on the ID supplied",
+            "description": "deletes a single stories based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Posts"
+          "Stories"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Posts": {
+      "Stories": {
         "required": [
           "id"
         ],
@@ -574,73 +574,6 @@
               }
             }
           },
-          "audio": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "reactions": {
             "type": "array",
             "items": {
@@ -672,198 +605,6 @@
                 "updated_by": {
                   "type": "string"
                 }
-              }
-            }
-          },
-          "image": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "reposts": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "comments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "audio": {
-                  "type": "string"
-                },
-                "reactions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "image": {
-                  "type": "string"
-                },
-                "reposts": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "repost": {
-                  "type": "string"
-                },
-                "author": {
-                  "type": "string"
-                },
-                "video": {
-                  "type": "string"
-                },
-                "lastActive": {
-                  "type": "string"
-                },
-                "score": {
-                  "type": "number"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "repost": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "content": {
-                "type": "string"
-              },
-              "comments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "audio": {
-                "type": "string"
-              },
-              "reactions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "image": {
-                "type": "string"
-              },
-              "reposts": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "repost": {
-                "type": "string"
-              },
-              "author": {
-                "type": "string"
-              },
-              "video": {
-                "type": "string"
-              },
-              "lastActive": {
-                "type": "string"
-              },
-              "score": {
-                "type": "number"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
@@ -998,11 +739,6 @@
               }
             }
           },
-          "lastActive": {
-            "type": "string",
-            "format": "date-time",
-            "default": "2021-02-07T01:00:00.000Z"
-          },
           "score": {
             "type": "number",
             "default": 0
@@ -1013,7 +749,7 @@
           }
         }
       },
-      "NewPosts": {
+      "NewStories": {
         "properties": {
           "content": {
             "type": "string"
@@ -1030,22 +766,8 @@
               "type": "string"
             }
           },
-          "reposts": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "repost": {
-            "type": "string"
-          },
           "author": {
             "type": "string"
-          },
-          "lastActive": {
-            "type": "string",
-            "format": "date-time",
-            "default": "2021-02-07T01:00:00.000Z"
           },
           "score": {
             "type": "number",
@@ -1067,7 +789,7 @@
   },
   "tags": [
     {
-      "name": "Posts"
+      "name": "Stories"
     }
   ]
 }

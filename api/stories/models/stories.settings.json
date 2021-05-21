@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stories",
+  "info": {
+    "name": "stories",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "comments": {
+      "collection": "comments",
+      "via": "story"
+    },
+    "reactions": {
+      "collection": "reactions",
+      "via": "story"
+    },
+    "author": {
+      "via": "stories",
+      "model": "authors"
+    },
+    "video": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "score": {
+      "type": "float",
+      "default": 0
+    }
+  }
+}
