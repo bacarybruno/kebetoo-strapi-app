@@ -653,6 +653,49 @@
               }
             }
           },
+          "story": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "reactions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "author": {
+                "type": "string"
+              },
+              "video": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "reactions": {
             "type": "array",
             "items": {
@@ -666,8 +709,16 @@
                 "post": {
                   "type": "string"
                 },
-                "type": {
+                "story": {
                   "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "like",
+                    "dislike",
+                    "love"
+                  ]
                 },
                 "comment": {
                   "type": "string"
@@ -708,6 +759,12 @@
                 }
               },
               "posts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "stories": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -761,6 +818,9 @@
                 "post": {
                   "type": "string"
                 },
+                "story": {
+                  "type": "string"
+                },
                 "reactions": {
                   "type": "array",
                   "items": {
@@ -805,6 +865,9 @@
               "post": {
                 "type": "string"
               },
+              "story": {
+                "type": "string"
+              },
               "reactions": {
                 "type": "array",
                 "items": {
@@ -839,6 +902,9 @@
             "type": "string"
           },
           "post": {
+            "type": "string"
+          },
+          "story": {
             "type": "string"
           },
           "reactions": {

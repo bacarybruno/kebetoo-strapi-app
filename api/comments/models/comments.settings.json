@@ -25,6 +25,10 @@
       "via": "comments",
       "model": "posts"
     },
+    "story": {
+      "via": "comments",
+      "model": "stories"
+    },
     "reactions": {
       "collection": "reactions",
       "via": "comment"

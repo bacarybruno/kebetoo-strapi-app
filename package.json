@@ -9,7 +9,7 @@
     "build": "strapi build",
     "strapi": "strapi",
     "load:test": "artillery run load-test.yaml -o load-test-report.json",
-    "heroku-postbuild": "npm run build && node ./migrate-3.4.0.js ./"
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
     "artillery": "^1.6.1",
@@ -19,17 +19,17 @@
   "dependencies": {
     "firebase-admin": "^9.4.2",
     "pm2": "^4.5.4",
-    "strapi": "3.4.1",
-    "strapi-admin": "3.4.1",
-    "strapi-connector-mongoose": "3.4.1",
-    "strapi-plugin-content-manager": "3.4.1",
-    "strapi-plugin-content-type-builder": "3.4.1",
-    "strapi-plugin-documentation": "^3.4.1",
-    "strapi-plugin-email": "3.4.1",
-    "strapi-plugin-upload": "3.4.1",
-    "strapi-plugin-users-permissions": "3.4.1",
-    "strapi-provider-upload-aws-s3": "3.4.1",
-    "strapi-utils": "3.4.1"
+    "strapi": "3.6.2",
+    "strapi-admin": "3.6.2",
+    "strapi-connector-mongoose": "3.6.2",
+    "strapi-plugin-content-manager": "3.6.2",
+    "strapi-plugin-content-type-builder": "3.6.2",
+    "strapi-plugin-documentation": "^3.6.2",
+    "strapi-plugin-email": "3.6.2",
+    "strapi-plugin-upload": "3.6.2",
+    "strapi-plugin-users-permissions": "3.6.2",
+    "strapi-provider-upload-aws-s3": "3.6.2",
+    "strapi-utils": "3.6.2"
   },
   "author": {
     "name": "A Strapi developer"

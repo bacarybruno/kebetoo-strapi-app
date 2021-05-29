@@ -583,6 +583,49 @@
               }
             }
           },
+          "story": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "comments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "reactions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "author": {
+                "type": "string"
+              },
+              "video": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "type": {
             "type": "string",
             "enum": [
@@ -606,6 +649,9 @@
                 "type": "string"
               },
               "post": {
+                "type": "string"
+              },
+              "story": {
                 "type": "string"
               },
               "reactions": {
@@ -663,6 +709,12 @@
                   "type": "string"
                 }
               },
+              "stories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "reactions": {
                 "type": "array",
                 "items": {
@@ -697,6 +749,9 @@
       "NewReactions": {
         "properties": {
           "post": {
+            "type": "string"
+          },
+          "story": {
             "type": "string"
           },
           "type": {

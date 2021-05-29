@@ -13,6 +13,10 @@
       "via": "reactions",
       "model": "posts"
     },
+    "story": {
+      "via": "reactions",
+      "model": "stories"
+    },
     "type": {
       "type": "enumeration",
       "enum": [

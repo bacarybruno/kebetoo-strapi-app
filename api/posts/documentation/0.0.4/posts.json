@@ -544,6 +544,9 @@
                 "post": {
                   "type": "string"
                 },
+                "story": {
+                  "type": "string"
+                },
                 "reactions": {
                   "type": "array",
                   "items": {
@@ -651,8 +654,16 @@
                 "post": {
                   "type": "string"
                 },
-                "type": {
+                "story": {
                   "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "like",
+                    "dislike",
+                    "love"
+                  ]
                 },
                 "comment": {
                   "type": "string"
@@ -885,6 +896,12 @@
                 }
               },
               "posts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "stories": {
                 "type": "array",
                 "items": {
                   "type": "string"
